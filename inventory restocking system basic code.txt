@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_ITEMS 100
+#define NAME_LEN 50
+
+int main(void) {
+    int n, i;
+    char item_name[NAME_LEN];
+    int current_stock;
+    int threshold;
+    int required_level;
+
+    printf("Enter number of inventory items: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("\nItem #%d\n", i + 1);
+        printf("Enter item name: ");
+        getchar();
+        fgets(item_name, NAME_LEN, stdin);
+        item_name[strcspn(item_name, "\n")] = '\0';
+
+        printf("Enter current stock: ");
+        scanf("%d", &current_stock);
+
+        printf("Enter threshold: ");
+        scanf("%d", &threshold);
+
+        printf("Enter required level: ");
+        scanf("%d", &required_level);
+
+        if (current_stock < threshold) {
+            int restock_amount = required_level - current_stock;
+            if (restock_amount < 0) restock_amount = 0;
+            printf("Restock amount = %d for %s\n", restock_amount, item_name);
+        } else {
+            printf("%s has enough stock\n", item_name);
+        }
+    }
+
+    printf("\nRestocking check completed\n");
+    return 0;
+}
