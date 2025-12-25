@@ -1,0 +1,38 @@
+OUTPUT
+
+
+
+Enter number of inventory items: 4
+
+Item #1
+Enter item name: Pens
+Enter current stock: 15
+Enter threshold: 20
+Enter required level: 50
+Restock amount = 35 for Pens
+
+Item #2
+Enter item name: Notebooks
+Enter current stock: 60
+Enter threshold: 40
+Enter required level: 80
+Notebooks has enough stock
+
+Item #3
+Enter item name: Highlighters
+Enter current stock: 5
+Enter threshold: 15
+Enter required level: 30
+Restock amount = 25 for Highlighters
+
+Item #4
+Enter item name: Staplers
+Enter current stock: 18
+Enter threshold: 25
+Enter required level: 40
+Restock amount = 22 for Staplers
+
+Restocking check completed
+
+
+=== Code Execution Successful ===
